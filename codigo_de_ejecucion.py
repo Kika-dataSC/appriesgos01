@@ -46,10 +46,9 @@ def ejecutar_modelos(df):
     with open('pipe_ejecucion_lgd.pickle', mode='rb') as file:
        pipe_ejecucion_lgd = pickle.load(file)
 
-
-	x_pd.fillna(0, inplace=True)
-	x_ead.fillna(0, inplace=True)
-	x_lgd.fillna(0, inplace=True)
+     x_pd.fillna(0, inplace=True)
+     x_ead.fillna(0, inplace=True)
+     x_lgd.fillna(0, inplace=True)
 
      #7.EJECUCION
      scoring_pd = pipe_ejecucion_pd.predict_proba(x_pd)[:, 1]
