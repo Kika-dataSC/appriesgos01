@@ -41,13 +41,13 @@ def ejecutar_modelos(df):
 
     #6.CARGA PIPES DE EJECUCION
     with open('pipe_ejecucion_pd.pickle', mode='rb') as file:
-    pipe_ejecucion_pd = pickle.load(file)
+        pipe_ejecucion_pd = pickle.load(file)
 
     with open('pipe_ejecucion_ead.pickle', mode='rb') as file:
-    pipe_ejecucion_ead = pickle.load(file)
+        pipe_ejecucion_ead = pickle.load(file)
 
     with open('pipe_ejecucion_lgd.pickle', mode='rb') as file:
-    pipe_ejecucion_lgd = pickle.load(file)
+        pipe_ejecucion_lgd = pickle.load(file)
 
     #7.EJECUCION
     scoring_pd = pipe_ejecucion_pd.predict_proba(x_pd)[:, 1]
