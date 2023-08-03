@@ -35,6 +35,9 @@ def ejecutar_modelos(df):
     x_ead = creacion_variables(calidad_datos(df))
     x_lgd = creacion_variables(calidad_datos(df))
 
+    x_pd.fillna(0, inplace=True)
+    x_ead.fillna(0, inplace=True)
+    x_lgd.fillna(0, inplace=True)
 
     #6.CARGA PIPES DE EJECUCION
     with open('pipe_ejecucion_pd.pickle', mode='rb') as file:
